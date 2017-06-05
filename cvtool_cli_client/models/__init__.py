@@ -27,4 +27,6 @@ from .new_job_request import NewJobRequest
 from .project import Project
 from .projects import Projects
 from .settings import Settings
+from .tenant import Tenant
+from .tenants import Tenants
 from .vision_annotations import VisionAnnotations

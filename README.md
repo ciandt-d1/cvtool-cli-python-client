@@ -82,6 +82,10 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**get_project**](docs/ProjectApi.md#get_project) | **GET** /projects/{project_id} | 
 *ProjectApi* | [**list_projects**](docs/ProjectApi.md#list_projects) | **GET** /projects | 
 *ProjectApi* | [**put_project**](docs/ProjectApi.md#put_project) | **PUT** /projects/{project_id} | 
+*TenantApi* | [**get_tenant**](docs/TenantApi.md#get_tenant) | **GET** /tenants/{tenant_id} | 
+*TenantApi* | [**get_tenants**](docs/TenantApi.md#get_tenants) | **GET** /tenants | 
+*TenantApi* | [**post_tenant**](docs/TenantApi.md#post_tenant) | **POST** /tenants | 
+*TenantApi* | [**put_tenant**](docs/TenantApi.md#put_tenant) | **PUT** /tenants/{tenant_id} | 
 
 
 ## Documentation For Models
@@ -99,6 +103,8 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [Projects](docs/Projects.md)
  - [Settings](docs/Settings.md)
+ - [Tenant](docs/Tenant.md)
+ - [Tenants](docs/Tenants.md)
  - [VisionAnnotations](docs/VisionAnnotations.md)
 
 

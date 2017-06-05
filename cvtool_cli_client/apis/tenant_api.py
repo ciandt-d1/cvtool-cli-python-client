@@ -123,7 +123,7 @@ class TenantApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/tenants/{tenant_id}', 'GET',
                                         path_params,
@@ -215,7 +215,7 @@ class TenantApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/tenants', 'GET',
                                         path_params,
@@ -315,7 +315,7 @@ class TenantApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/tenants', 'POST',
                                         path_params,
@@ -422,7 +422,7 @@ class TenantApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/tenants/{tenant_id}', 'PUT',
                                         path_params,

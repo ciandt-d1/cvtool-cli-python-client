@@ -27,6 +27,8 @@ from .models.new_job_request import NewJobRequest
 from .models.project import Project
 from .models.projects import Projects
 from .models.settings import Settings
+from .models.tenant import Tenant
+from .models.tenants import Tenants
 from .models.vision_annotations import VisionAnnotations
 
 # import apis into sdk package
@@ -34,6 +36,7 @@ from .apis.export_api import ExportApi
 from .apis.image_api import ImageApi
 from .apis.job_api import JobApi
 from .apis.project_api import ProjectApi
+from .apis.tenant_api import TenantApi
 
 # import ApiClient
 from .api_client import ApiClient
