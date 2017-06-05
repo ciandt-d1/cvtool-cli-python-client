@@ -40,7 +40,7 @@ class ExportApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def export(self, tenant_id, export_request, **kwargs):
+    def export(self, tenant_id, **kwargs):
         """
         Export all images to BQ.
         This method makes a synchronous HTTP request by default. To make an
@@ -49,24 +49,23 @@ class ExportApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.export(tenant_id, export_request, callback=callback_function)
+        >>> thread = api.export(tenant_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str tenant_id: tenant id (required)
-        :param ExportRequest export_request: export request (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.export_with_http_info(tenant_id, export_request, **kwargs)
+            return self.export_with_http_info(tenant_id, **kwargs)
         else:
-            (data) = self.export_with_http_info(tenant_id, export_request, **kwargs)
+            (data) = self.export_with_http_info(tenant_id, **kwargs)
             return data
 
-    def export_with_http_info(self, tenant_id, export_request, **kwargs):
+    def export_with_http_info(self, tenant_id, **kwargs):
         """
         Export all images to BQ.
         This method makes a synchronous HTTP request by default. To make an
@@ -75,18 +74,17 @@ class ExportApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.export_with_http_info(tenant_id, export_request, callback=callback_function)
+        >>> thread = api.export_with_http_info(tenant_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str tenant_id: tenant id (required)
-        :param ExportRequest export_request: export request (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['tenant_id', 'export_request']
+        all_params = ['tenant_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -104,9 +102,6 @@ class ExportApi(object):
         # verify the required parameter 'tenant_id' is set
         if ('tenant_id' not in params) or (params['tenant_id'] is None):
             raise ValueError("Missing the required parameter `tenant_id` when calling `export`")
-        # verify the required parameter 'export_request' is set
-        if ('export_request' not in params) or (params['export_request'] is None):
-            raise ValueError("Missing the required parameter `export_request` when calling `export`")
 
         if 'tenant_id' in params and len(params['tenant_id']) > 64:
             raise ValueError("Invalid value for parameter `tenant_id` when calling `export`, length must be less than or equal to `64`")
@@ -129,14 +124,12 @@ class ExportApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'export_request' in params:
-            body_params = params['export_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/images/{tenant_id}/export', 'POST',
                                         path_params,

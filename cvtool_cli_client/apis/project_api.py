@@ -138,7 +138,7 @@ class ProjectApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/projects', 'POST',
                                         path_params,
@@ -251,7 +251,7 @@ class ProjectApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/projects/{project_id}', 'GET',
                                         path_params,
@@ -357,7 +357,7 @@ class ProjectApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/projects', 'GET',
                                         path_params,
@@ -477,7 +477,7 @@ class ProjectApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/projects/{project_id}', 'PUT',
                                         path_params,

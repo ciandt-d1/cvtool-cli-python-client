@@ -23,6 +23,9 @@ import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
+# Configure OAuth2 access token for authorization: cvtool_token
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
 # create an instance of the API class
 api_instance = cvtool_cli_client.ImageApi()
 tenant_id = 'tenant_id_example' # str | tenant id
@@ -48,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[cvtool_token](../README.md#cvtool_token)
 
 ### HTTP request headers
 
@@ -71,6 +74,9 @@ import time
 import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
+
+# Configure OAuth2 access token for authorization: cvtool_token
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = cvtool_cli_client.ImageApi()
@@ -99,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[cvtool_token](../README.md#cvtool_token)
 
 ### HTTP request headers
 

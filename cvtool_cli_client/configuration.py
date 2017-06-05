@@ -64,9 +64,6 @@ class Configuration(object):
         # access token for OAuth
         self.access_token = ""
 
-        # access token for OAuth
-        self.access_token = ""
-
         # Logging Settings
         self.logger = {}
         self.logger["package_logger"] = logging.getLogger("cvtool_cli_client")
@@ -213,14 +210,6 @@ class Configuration(object):
         return {
 
             'cvtool_token':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
-
-            'google_id_token':
                 {
                     'type': 'oauth2',
                     'in': 'header',

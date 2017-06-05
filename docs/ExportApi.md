@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **export**
-> export(tenant_id, export_request)
+> export(tenant_id)
 
 
 
@@ -22,13 +22,15 @@ import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
+# Configure OAuth2 access token for authorization: cvtool_token
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
 # create an instance of the API class
 api_instance = cvtool_cli_client.ExportApi()
 tenant_id = 'tenant_id_example' # str | tenant id
-export_request = cvtool_cli_client.ExportRequest() # ExportRequest | export request
 
 try: 
-    api_instance.export(tenant_id, export_request)
+    api_instance.export(tenant_id)
 except ApiException as e:
     print("Exception when calling ExportApi->export: %s\n" % e)
 ```
@@ -38,7 +40,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| tenant id | 
- **export_request** | [**ExportRequest**](ExportRequest.md)| export request | 
 
 ### Return type
 
@@ -46,7 +47,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[cvtool_token](../README.md#cvtool_token)
 
 ### HTTP request headers
 

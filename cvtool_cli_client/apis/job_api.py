@@ -143,7 +143,7 @@ class JobApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/jobs/{job_id}/steps', 'POST',
                                         path_params,
@@ -256,7 +256,7 @@ class JobApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/jobs', 'POST',
                                         path_params,
@@ -369,7 +369,7 @@ class JobApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/jobs/{job_id}/end', 'POST',
                                         path_params,
@@ -482,7 +482,7 @@ class JobApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/jobs/{job_id}', 'GET',
                                         path_params,
@@ -595,7 +595,7 @@ class JobApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/jobs/{job_id}/start', 'POST',
                                         path_params,

@@ -51,16 +51,16 @@ import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: cvtool_token
+# Configure OAuth2 access token for authorization: google_id_token
 cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
-api_instance = cvtool_cli_client.ExportApi()
-tenant_id = 'tenant_id_example' # str | tenant id
+api_instance = cvtool_cli_client.AuthApi()
 
 try:
-    api_instance.export(tenant_id)
+    api_response = api_instance.token()
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ExportApi->export: %s\n" % e)
+    print("Exception when calling AuthApi->token: %s\n" % e)
 
 ```
 
@@ -70,7 +70,12 @@ All URIs are relative to *https://kingpick-admin-api.endpoints.ciandt-cognitive-
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AuthApi* | [**token**](docs/AuthApi.md#token) | **GET** /auth/token | 
+*DefaultApi* | [**setup**](docs/DefaultApi.md#setup) | **POST** /setup | 
+<<<<<<< HEAD
 *ExportApi* | [**export**](docs/ExportApi.md#export) | **POST** /images/{tenant_id}/export | 
+=======
+>>>>>>> 2d38b45e1d04eb4b3fb9d15ea9ff4bcf1abe462f
 *ImageApi* | [**add**](docs/ImageApi.md#add) | **POST** /images | 
 *ImageApi* | [**list_all**](docs/ImageApi.md#list_all) | **GET** /images | 
 *JobApi* | [**add_step**](docs/JobApi.md#add_step) | **POST** /jobs/{job_id}/steps | 
@@ -82,12 +87,20 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**get_project**](docs/ProjectApi.md#get_project) | **GET** /projects/{project_id} | 
 *ProjectApi* | [**list_projects**](docs/ProjectApi.md#list_projects) | **GET** /projects | 
 *ProjectApi* | [**put_project**](docs/ProjectApi.md#put_project) | **PUT** /projects/{project_id} | 
+*TenantApi* | [**get_tenant**](docs/TenantApi.md#get_tenant) | **GET** /tenants/{tenant_id} | 
+*TenantApi* | [**get_tenants**](docs/TenantApi.md#get_tenants) | **GET** /tenants | 
+*TenantApi* | [**post_tenant**](docs/TenantApi.md#post_tenant) | **POST** /tenants | 
+*TenantApi* | [**put_tenant**](docs/TenantApi.md#put_tenant) | **PUT** /tenants/{tenant_id} | 
 
 
 ## Documentation For Models
 
  - [Annotations](docs/Annotations.md)
  - [Error](docs/Error.md)
+<<<<<<< HEAD
+ - [ExportRequest](docs/ExportRequest.md)
+=======
+>>>>>>> 2d38b45e1d04eb4b3fb9d15ea9ff4bcf1abe462f
  - [ImageListResponse](docs/ImageListResponse.md)
  - [ImageRequest](docs/ImageRequest.md)
  - [ImageResponse](docs/ImageResponse.md)
@@ -99,6 +112,8 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [Projects](docs/Projects.md)
  - [Settings](docs/Settings.md)
+ - [Tenant](docs/Tenant.md)
+ - [Tenants](docs/Tenants.md)
  - [VisionAnnotations](docs/VisionAnnotations.md)
 
 
@@ -106,6 +121,13 @@ Class | Method | HTTP request | Description
 
 
 ## cvtool_token
+
+- **Type**: OAuth
+- **Flow**: implicit
+- **Authorization URL**: 
+- **Scopes**: N/A
+
+## google_id_token
 
 - **Type**: OAuth
 - **Flow**: implicit

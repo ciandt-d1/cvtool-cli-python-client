@@ -136,7 +136,7 @@ class ImageApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/images', 'POST',
                                         path_params,
@@ -256,7 +256,7 @@ class ImageApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['cvtool_token']
 
         return self.api_client.call_api('/images', 'GET',
                                         path_params,
