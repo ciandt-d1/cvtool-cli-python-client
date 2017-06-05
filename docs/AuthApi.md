@@ -22,9 +22,6 @@ import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: google_id_token
-cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # create an instance of the API class
 api_instance = cvtool_cli_client.AuthApi()
 
@@ -44,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[google_id_token](../README.md#google_id_token)
+No authorization required
 
 ### HTTP request headers
 

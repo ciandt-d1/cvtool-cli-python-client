@@ -50,17 +50,14 @@ import time
 import cvtool_cli_client
 from cvtool_cli_client.rest import ApiException
 from pprint import pprint
-
-# Configure OAuth2 access token for authorization: cvtool_token
-cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
-api_instance = cvtool_cli_client.ExportApi()
-tenant_id = 'tenant_id_example' # str | tenant id
+api_instance = cvtool_cli_client.AuthApi()
 
 try:
-    api_instance.export(tenant_id)
+    api_response = api_instance.token()
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ExportApi->export: %s\n" % e)
+    print("Exception when calling AuthApi->token: %s\n" % e)
 
 ```
 
@@ -70,6 +67,7 @@ All URIs are relative to *https://kingpick-admin-api.endpoints.ciandt-cognitive-
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AuthApi* | [**token**](docs/AuthApi.md#token) | **GET** /auth/token | 
 *ExportApi* | [**export**](docs/ExportApi.md#export) | **POST** /images/{tenant_id}/export | 
 *ImageApi* | [**add**](docs/ImageApi.md#add) | **POST** /images | 
 *ImageApi* | [**list_all**](docs/ImageApi.md#list_all) | **GET** /images | 

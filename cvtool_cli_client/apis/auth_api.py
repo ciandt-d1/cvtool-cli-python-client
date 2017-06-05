@@ -115,7 +115,7 @@ class AuthApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['google_id_token']
+        auth_settings = []
 
         return self.api_client.call_api('/auth/token', 'GET',
                                         path_params,

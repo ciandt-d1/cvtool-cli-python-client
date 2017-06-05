@@ -32,6 +32,7 @@ from .models.tenants import Tenants
 from .models.vision_annotations import VisionAnnotations
 
 # import apis into sdk package
+from .apis.auth_api import AuthApi
 from .apis.export_api import ExportApi
 from .apis.image_api import ImageApi
 from .apis.job_api import JobApi
