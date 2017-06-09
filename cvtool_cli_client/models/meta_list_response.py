@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Kingpick Admin API
+    CVTool CLI API
 
     Provides APIs for tenant maintenance
 

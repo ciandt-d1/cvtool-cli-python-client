@@ -119,6 +119,13 @@ Class | Method | HTTP request | Description
 - **Authorization URL**: 
 - **Scopes**: N/A
 
+## gae_default_service_account
+
+- **Type**: OAuth
+- **Flow**: implicit
+- **Authorization URL**: 
+- **Scopes**: N/A
+
 ## google_id_token
 
 - **Type**: OAuth

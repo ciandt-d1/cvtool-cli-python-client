@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Kingpick Admin API
+    CVTool CLI API
 
     Provides APIs for tenant maintenance
 
@@ -28,10 +28,10 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Kingpick Admin API",
+    description="CVTool CLI API",
     author_email="",
     url="",
-    keywords=["Swagger", "Kingpick Admin API"],
+    keywords=["Swagger", "CVTool CLI API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,

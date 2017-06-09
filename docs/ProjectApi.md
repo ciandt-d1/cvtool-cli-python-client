@@ -27,6 +27,8 @@ from pprint import pprint
 
 # Configure OAuth2 access token for authorization: cvtool_token
 cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+# Configure OAuth2 access token for authorization: gae_default_service_account
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = cvtool_cli_client.ProjectApi()
@@ -54,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[cvtool_token](../README.md#cvtool_token)
+[cvtool_token](../README.md#cvtool_token), [gae_default_service_account](../README.md#gae_default_service_account)
 
 ### HTTP request headers
 
@@ -79,6 +81,8 @@ from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: cvtool_token
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+# Configure OAuth2 access token for authorization: gae_default_service_account
 cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
@@ -106,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[cvtool_token](../README.md#cvtool_token)
+[cvtool_token](../README.md#cvtool_token), [gae_default_service_account](../README.md#gae_default_service_account)
 
 ### HTTP request headers
 
@@ -132,6 +136,8 @@ from pprint import pprint
 
 # Configure OAuth2 access token for authorization: cvtool_token
 cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+# Configure OAuth2 access token for authorization: gae_default_service_account
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = cvtool_cli_client.ProjectApi()
@@ -156,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[cvtool_token](../README.md#cvtool_token)
+[cvtool_token](../README.md#cvtool_token), [gae_default_service_account](../README.md#gae_default_service_account)
 
 ### HTTP request headers
 
@@ -181,6 +187,8 @@ from cvtool_cli_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: cvtool_token
+cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+# Configure OAuth2 access token for authorization: gae_default_service_account
 cvtool_cli_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
@@ -210,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[cvtool_token](../README.md#cvtool_token)
+[cvtool_token](../README.md#cvtool_token), [gae_default_service_account](../README.md#gae_default_service_account)
 
 ### HTTP request headers
 

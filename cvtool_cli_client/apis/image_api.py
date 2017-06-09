@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Kingpick Admin API
+    CVTool CLI API
 
     Provides APIs for tenant maintenance
 
@@ -136,7 +136,7 @@ class ImageApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['cvtool_token']
+        auth_settings = ['cvtool_token', 'gae_default_service_account']
 
         return self.api_client.call_api('/images', 'POST',
                                         path_params,
@@ -242,7 +242,7 @@ class ImageApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['cvtool_token']
+        auth_settings = ['cvtool_token', 'gae_default_service_account']
 
         return self.api_client.call_api('/images/{tenant_id}/export', 'POST',
                                         path_params,
@@ -362,7 +362,7 @@ class ImageApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['cvtool_token']
+        auth_settings = ['cvtool_token', 'gae_default_service_account']
 
         return self.api_client.call_api('/images', 'GET',
                                         path_params,

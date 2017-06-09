@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Kingpick Admin API
+    CVTool CLI API
 
     Provides APIs for tenant maintenance
 
@@ -60,6 +60,9 @@ class Configuration(object):
         self.username = ""
         # Password for HTTP basic authentication
         self.password = ""
+
+        # access token for OAuth
+        self.access_token = ""
 
         # access token for OAuth
         self.access_token = ""
@@ -213,6 +216,14 @@ class Configuration(object):
         return {
 
             'cvtool_token':
+                {
+                    'type': 'oauth2',
+                    'in': 'header',
+                    'key': 'Authorization',
+                    'value': 'Bearer ' + self.access_token
+                },
+
+            'gae_default_service_account':
                 {
                     'type': 'oauth2',
                     'in': 'header',
